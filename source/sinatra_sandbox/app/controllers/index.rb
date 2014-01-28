@@ -15,5 +15,11 @@ post '/cool_url' do
   puts "[LOG] Posting to /cool_url"
   puts "[LOG] Params: #{params.inspect}"
   @input = params[:user_input]
+  @number = params[:user_input].to_i
   erb :post_cool_url
 end
+
+get '/go_to_google' do
+  redirect "http://google.com"
+end
+
