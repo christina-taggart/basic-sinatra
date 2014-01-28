@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Deaf Grandma</h1>
+  <% if @grandma %>
+    <p>Grandma says: "<span id="grandma_says"><%= @grandma %></span>"</p>
+  <% end %>
+
+  <form action="/grandma" method="post">
+    Say something to Grandma:
+    <br>
+    <input type="text" name="user_input">
+    <input type="submit" value="Say it!">
+  </form>
+</div>
+
+<div class="container">
+    <p>class=> <%=self.class%></p>
+  <p>instance variables=> <%=self.instance_variables%></p>
+  <p><ul>
+    <li><%=@default_layout%></li>
+    <li><%=@app%></li>
+    <li><%=@template_cache%></li>
+    <li><%=@env%></li>
+    <li><%=@request%></li>
+    <li><%=@response%></li>
+    <li><%=@params%></li>
+    <li><%=@grandma%></li>
+    <li><%=@preferred_extension%></li>
+    <li>the _out_buf is the entire output of the page </li>
+  </ul></p>
+
+</div>
