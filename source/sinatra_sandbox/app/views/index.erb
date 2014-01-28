@@ -22,9 +22,19 @@
   </table>
   <br>
   <form action="/cool_url" method="post">
-    <input type="text" name="user_input">
+    <input type="text" name="post[user_input]"><br>
+    <textarea cols="20" rows="5" name="post[block_text]"></textarea><br>
+    <input type="radio" name="gender" value="female"> FEMALE<br>
+    <input type="radio" name="gender" value="male"> MALE<br>
+    <input type="checkbox" name="Terms and conditions" value="YES"> I ACCEPT<br>
+    <select name="favorite food">
+      <option value="pizza">Pizza</option>
+      <option value="pizza">Bagel</option>
+      <option value="pizza">Cats</option>
+    </select>
     <input type="submit" value="Post cool url">
   </form>
+  <br>
   <br>
   <form action="/cool_url" method="get">
     <input type="text" name="user_input">
