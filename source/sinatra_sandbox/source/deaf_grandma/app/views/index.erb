@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Deaf Grandma</h1>
+  <% if @grandma %>
+    <p>Grandma says: "<span id="grandma_says"><%= @grandma %></span>"</p>
+  <% end %>
+  <% if @mood%>
+    <p>Feeling <%=@mood%></p>
+  <%end%>
+
+
+  <form action="/grandma" method="post">
+    Say something to Grandma:
+    <br>
+    <input type="text" name="user_input">
+    <br>
+    <h3>What's your mood while talking to Grandma?</h3>
+    <input type="radio" name="mood" value="Sad"> Sad<br>
+    <input type="radio" name="mood" value="Happy"> Happy<br>
+    <input type="radio" name="mood" value="Annoyed"> Annoyed. Stop being so racist, Grandma!<br>
+    <input type="submit" value="Say it!">
+  </form>
+</div>
+
+
