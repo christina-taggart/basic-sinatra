@@ -21,3 +21,26 @@
     </tr>
   </table>
 </div>
+
+<div>
+  <center>
+  <form name="get_request" action="cool_url" method="get">
+    <input type="text" name="user_input">
+    <input type="submit" value="Make a GET Request">
+  </form>
+
+  <form name="input" action="cool_url" method="post">
+    <input type="text" name="user_input">
+    <input type="submit" value="Make a POST Request">
+  </form>
+  </center>
+</div>
+
+<div>
+  <p>Instance Variables Available to this view:</p>
+  <p><%= instance_variables %></p>
+  <p>A look inside params:</p>
+  <p><%= params.inspect %></p>
+  <p>What Class is this page?</p>
+  <p><%= self.class %></p>
+</div>
