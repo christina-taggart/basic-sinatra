@@ -20,3 +20,9 @@ post '/cool_url' do
   puts "[LOG] Params: #{params.inspect}"
   erb :post_cool_url
 end
+
+get '/test_cool_url' do
+  puts "[LOG] Getting /cool_url"
+  puts "[LOG] Params: #{params.inspect}"
+  erb :test_cool_url
+end
