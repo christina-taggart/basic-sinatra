@@ -1,6 +1,12 @@
 <div class="container">
   <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <% @env.each do |key, value| %>
+  <p><%= key %>: <%= value %></p>
+  <%=
+
+
+  %>
+  <% end %>
 
   <table>
     <tr>
@@ -20,4 +26,45 @@
       <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
     </tr>
   </table>
+</div>
+
+<div class="container">
+  <h1>GET request to /cool_url</h1>
+  <form name="input" action="cool_url" method="get">
+    user_name: <input type="text" name="user_input"><br />
+    password: <input type="password" name="password"><br />
+    Something: <input type="text" name="test[something]">
+    Anything: <input type="text" name="test[anything]">
+    Description: <textarea name="test[description]"></textarea>
+    <input type="submit" value="Submit">
+
+
+  </form>
+</div>
+
+<div class="container">
+  <h1>POST request to /cool_url</h1>
+  <form name="input" action="cool_url" method="post">
+    user_name: <input type="text" name="user_input"><br />
+    password: <input type="password" name="password"><br />
+    <input type="checkbox" name="bottle" value="passed_to_controller">Checkbox test<br/>
+    <input type="radio" name="input" value="keyboard">Keyboard<br>
+    <input type="radio" name="input" value="mouse">Mouse<br>
+    <input type="radio" name="other" value="one">One<br>
+    <input type="radio" name="other" value="two">two<br>
+    <select name="from_select">
+     <option value="pizza">Pizza</option>
+     <option value="cake">Cake</option>
+     <option value="pie">Pie</option>
+     <option value="candy">Candy</option>
+    </select><br>
+
+    Something: <input type="text" name="wow[something]">
+    Anything: <input type="text" name="wow[anything]">
+    Description: <textarea name="wow[description]"></textarea>
+    <input type="submit" value="Submit">
+  </form>
+
+
+
 </div>
