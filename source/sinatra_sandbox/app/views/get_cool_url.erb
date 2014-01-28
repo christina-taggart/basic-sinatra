@@ -1,6 +1,8 @@
 <div class="container">
   <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <p>NO IT'S not <%= params[:fname] %>. ITS KATE MARA!!!!</p>
+  <img src="http://hdwallpaperszon.com/wp-content/uploads/2013/10/Kate-Mara-Wallpapers-13.jpg" alt="Smiley face" width="375" height="525">
+
 
   <table>
     <tr>
@@ -20,17 +22,6 @@
       <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
     </tr>
   </table>
-  <div>
-  <form action="/cool_url" method="get">
-  Who is the Prettiest Actress?: <input type="text" name="fname">
-         <input type="submit" value="Submit">
-       </div>
-       </form>
-    <br>
-    <div>
-  <form action="/cool_url" method="post">
-    Who is the cutest kid? <input type="text" name="kid">
-    <input type="submit" value="Submit">
-</form>
-</div>
+
+
 </div>
