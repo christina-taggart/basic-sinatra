@@ -1,23 +1,26 @@
-<div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+<!-- Simple form which will send a GET request -->
+<form action="/get_cool_url">
+  <label for="GET-name">Enter Andy's Chinese Name</label>
+  <input id="GET-name" type="text" name="name">
+  <input type="submit" value="Save">
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
-</div>
+  <fieldset>
+    <legend>ALL ABOUT ANDY</legend>
+    <input type="radio" name="radio" id="radio"> <label for="radio">Click here if you think Andy has ever stolen something larger than a bread box. </label>
+    <input type="submit" value="Save">
+  </fieldset>
+
+  <input type="checkbox" name="option1" value="Check"> Check this out <br>
+
+  <textarea cols="40" rows="5" name="myname">
+  Andy plays soccer.
+  </textarea>
+
+  <select name="Favorite Foods">
+  <option value="Duck">Beijing Duck</option>
+  <option value="Lamb">Lamb Skewers from Mongolia</option>
+  <option value="Horse">Raw Horse Meat</option>
+  </select>
+
+  <input type="submit" value="Save">
+</form>
