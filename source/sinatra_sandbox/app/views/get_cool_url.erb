@@ -1,5 +1,6 @@
 <div class="container">
   <h1>Welcome to Sinatra!</h1>
+  <h1>I LOVE <%= @input.upcase %></h1>
   <img width=500px; src="http://thebarkpost.com/wp-content/uploads/2013/03/oie_5181838bU3HJXJp.gif"/>
 
   <table>
@@ -20,9 +21,4 @@
       <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
     </tr>
   </table>
-  <br>
-  <form action="/cool_url" method="post">
-    <input type="text" name="user_input">
-    <input type="submit" value="Push this button!">
-  </form>
 </div>

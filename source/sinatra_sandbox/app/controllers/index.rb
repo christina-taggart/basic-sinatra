@@ -7,6 +7,7 @@ end
 get '/cool_url' do
   puts "[LOG] Getting /cool_url"
   puts "[LOG] Params: #{params.inspect}"
+  @input = params[:user_input]
   erb :get_cool_url
 end
 
