@@ -7,3 +7,12 @@
 th {
   text-align: left;
 }
+
+label {
+  text-decoration: underline;
+  color: green;
+}
+
+.form {
+  text-align: center;
+}
