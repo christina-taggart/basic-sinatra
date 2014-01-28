@@ -2,8 +2,28 @@
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  border: 4px dotted #FFD900;
+
 }
-th {
-  text-align: left;
+
+p{
+  font-family: helvetica;
+  font-weight: bolder;
+  color: #4400FF;
+  text-align: center;
+}
+
+form{
+  color: blue;
+}
+
+.button{
+  padding-top: 20px;
+
+}
+
+textarea{
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: #FF00EE;
+  text-align: center;
 }

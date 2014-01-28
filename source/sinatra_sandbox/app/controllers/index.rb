@@ -13,7 +13,7 @@ get '/get_cool_url' do
 end
 
 post '/post_cool_url' do
-  @input = params[:textform]
+  @input = params[:post]
   puts "[LOG] Posting to /cool_url"
   puts "[LOG] Params: #{params.inspect}"
   erb :post_cool_url
