@@ -28,8 +28,33 @@
   <input type="submit" value="Where are the URL's at?">
 </form>
 
+<form class="form" action="/cool_url" method="get">
+  <label for="URL">Favorite pizza?</label>
+  <input type="radio" name="pizza" value="Cheese"> Cheese
+  <input type="radio" name="pizza" value="Pepperoni"> Pepperoni
+  <input type="submit" value="Give me your feedback!">
+</form>
+
+<form class="form" action="/cool_url" method="post">
+  <label for="URL">Favorite car?</label>
+  <input type="radio" name="car" value="Porsche"> Porsche
+  <input type="radio" name="car" value="Ferarri"> Ferarri
+  <input type="submit" value="Give me your feedback!">
+</form>
+
 <form class="form" action="/cool_url" method="post">
   <label for="URL">Wicked URL:</label>
   <input type="text" name="user_input">
   <input type="submit" value="WHERE ALL DA URL'S AT!?!">
 </form>
+
+<form class="form" action="/cool_url" method="post">
+  <input type="text" name="post[title]">
+  <input type="text" name="post[price]">
+  <textarea name="post[description]"></textarea>
+  <input type="submit" value="Give me your feedback!">
+</form>
+<!-- The type is kind of form. There are several kinds (Radio, submit, password etc.) Name is the parameter that can be passed into Sinatra (on the index.rb) and converted into an instance variable.
+The value is what is being passed to the new URL.
+Release 3: It looks like if you pass "post[something]" into the name field you create a hash that is passed to the server. The [something] in brackets is used as the key and the value inserted by the user is the value.
+{"post"=>{"title"=>"howdy", "price"=>"hey ", "description"=>"yo"}} It's actually a nested hash where post is the primary key and everything else is nested as value key-value pairs.-->
